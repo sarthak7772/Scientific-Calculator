@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific-Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <pre id="header"><b>Home Reset</b></pre>
+    </header>
+    <main>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="first row">
+                <button id="mc">MC</button>
+                <button id="mr">MR</button>
+                <button id="m+">M+</button>
+                <button id="m-">M-</button>
+            </div>
+            <div class="second row button">
+                <button onclick="appendToDisplay('%',0)">%</button>
+                <button onclick="recent_clear()">CE</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="back_to()">Back</button>
+            </div>
+            <div class="third row button">
+                <button onclick="onebyx()">1/x</button>
+                <button onclick="xpow2()">x<sup>2</sup></button>
+                <button onclick="two_rootx()">2&radic;x</button>
+                <button onclick="appendToDisplay('/',0)">&divide;</button>
+            </div>
+            <div class="fourth row button">
+                <button onclick="appendToDisplay('7',1)">7</button>
+                <button onclick="appendToDisplay('8',1)">8</button>
+                <button onclick="appendToDisplay('9',1)">9</button>
+                <button onclick="appendToDisplay('*',0)">X</button>
+            </div>
+            <div class="fifth row button">
+                <button onclick="appendToDisplay('4',1)">4</button>
+                <button onclick="appendToDisplay('5',1)">5</button>
+                <button onclick="appendToDisplay('6',1)">6</button>
+                <button onclick="appendToDisplay('-',0)">-</button>
+            </div>
+            <div class="sixth row button">
+                <button onclick="appendToDisplay('1',1)">1</button>
+                <button onclick="appendToDisplay('2',1)">2</button>
+                <button onclick="appendToDisplay('3',1)">3</button>
+                <button onclick="appendToDisplay('+',0)">+</button>
+            </div>
+            <div class="seventh row button">
+                <button onclick="sign_change()">&plusmn;</button>
+                <button onclick="appendToDisplay('0',1)">0</button>
+                <button onclick="dot('.')">.</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
